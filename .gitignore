@@ -213,3 +213,4 @@ ModelManifest.xml
 **/*.js.*
 **/*.js
 **/typings/**
+!gulpfile.js
