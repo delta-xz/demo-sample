@@ -17,6 +17,7 @@ var app = express();
 
 app.use(require('morgan')('combined'));
 app.use(require('cookie-parser')());
+app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 var expressSession = require('express-session');
