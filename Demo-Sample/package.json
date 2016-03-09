@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "description": "Demo-Sample",
   "main": "server.js",
-  "author": {
-    "name": "haria",
-    "email": ""
+  "scripts": {
+    "postinstall": "tsd install"
   },
   "dependencies": {
     "gulp-typescript": "^2.12.1",
