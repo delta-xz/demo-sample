@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "gulp-typescript": "^2.12.1",
-    "nodedata": "^0.0.11",
+    "nodedata": "^0.0.12",
     "typescript": "^1.8.7"
   },
   "devDependencies": {
