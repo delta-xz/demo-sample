@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
+    <Folder Include="services\" />
     <Folder Include="repositories\" />
     <Folder Include="typings\" />
     <Folder Include="typings\" />
@@ -80,6 +81,9 @@
     <TypeScriptCompile Include="repositories\student-repository.ts" />
     <TypeScriptCompile Include="repositories\teacher-repository.ts" />
     <TypeScriptCompile Include="repositories\userRepository.ts" />
+    <TypeScriptCompile Include="test-di.ts" />
+    <TypeScriptCompile Include="services\service-b.ts" />
+    <TypeScriptCompile Include="services\service-a.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
     <TypeScriptCompile Include="typings\form-data\form-data.d.ts" />
     <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />

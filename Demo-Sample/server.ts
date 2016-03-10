@@ -6,6 +6,14 @@ import Config = require('./config');
 var Main = require('nodedata')(Config, __dirname);
 var express = require("express");
 import {router} from 'nodedata/dynamic/dynamic-controller';
+import {TestDI} from './test-di';
+
+console.log('-------------------------------------------------------');
+console.log('Testing DI');
+var testDI = new TestDI();
+testDI.sayHello();
+testDI.showUsers();
+console.log('-------------------------------------------------------');
 
 require('reflect-metadata/reflect');
 var bodyParser = require("body-parser");
