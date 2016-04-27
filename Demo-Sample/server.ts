@@ -2,15 +2,22 @@
 /// <reference path="typings/linq/linq.3.0.3-Beta4.d.ts" />
 
 import http = require('http');
-import Config = require('./config');
-var Main = require('nodedata')(Config, __dirname);
 var express = require("express");
-import {router} from 'nodedata/dynamic/dynamic-controller';
+import {router} from 'nodedata/core/exports';
+
+import * as config from './config';
+import * as securityConfig from './security-config';
+
+import * as data from 'nodedata/mongoose';
+import * as security from 'nodedata/security/auth/security-utils';
+var Main = require('nodedata/core')(config, securityConfig, __dirname, data.entityServiceInst);
+data.connect();
+data.generateSchema();
+
 
 require('reflect-metadata/reflect');
 var bodyParser = require("body-parser");
 var passport = require('passport'), LocalStrategy = require('passport-local').Strategy;
-import * as config from './config';
 process.env.APP_ROOT = "hello";
 
 var app = express();

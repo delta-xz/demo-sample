@@ -1,6 +1,6 @@
 ﻿//import * as Express from "express";
 import * as role from '../models/role';
-import * as decorator from "nodedata/decorators/repository";
+import * as decorator from "nodedata/core/decorators/repository";
 import {BlogModel} from '../models/blogmodel';
 
 @decorator.repository({ path: 'blogs', model: BlogModel })

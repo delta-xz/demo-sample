@@ -1,11 +1,9 @@
-/// <reference path="../node_modules/nodedata/datatypes/mongoose.ts" />
-
-import * as RM from './rolemodel';
-import {field, document, onetomany, manytoone, manytomany} from 'nodedata/decorators'; 
+import {RoleModel} from './rolemodel';
+import {onetomany, manytoone, manytomany} from 'nodedata/core/decorators'; 
+import {field, document} from 'nodedata/mongoose/decorators';
 import {IUser} from './user';
 import {Types} from 'mongoose';
-import {Strict} from 'nodedata/enums';
-import * as r from './rolemodel';
+import {Strict} from 'nodedata/mongoose/enums';
 
 @document({ name: 'users', strict: Strict.false })
 export class UserModel {
@@ -33,8 +31,8 @@ export class UserModel {
     @field()
     age: string;
 
-    @onetomany({ rel: 'roles', itemType: RM, embedded: true })
-    roles: Array<RM.RoleModel>;
+    @manytomany({ rel: 'roles', itemType: RoleModel, embedded: true, persist: true, eagerLoading: true })
+    roles: Array<RoleModel>;
 
     _links: any;  
     
@@ -53,7 +51,7 @@ export class UserModel {
         if (userDto.roles)
             this.roles = userDto.roles;
         else
-            this.roles = new Array<RM.RoleModel>();
+            this.roles = new Array<RoleModel>();
     }
 }
 

@@ -1,10 +1,9 @@
-/// <reference path="../node_modules/nodedata/datatypes/mongoose.ts" />
-
 import * as TM from './teachermodel';
 import * as SM from './studentmodel';
-import {field, document, onetomany, manytoone, manytomany} from 'nodedata/decorators'; 
+import {onetomany, manytoone, manytomany} from 'nodedata/core/decorators';
+import {field, document} from 'nodedata/mongoose/decorators';
 import {Types} from 'mongoose';
-import {Strict} from 'nodedata/enums';
+import {Strict} from 'nodedata/mongoose/enums';
 
 @document({ name: 'courses', strict: Strict.throw })
 export class CourseModel {

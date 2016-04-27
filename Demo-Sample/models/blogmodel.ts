@@ -1,8 +1,7 @@
-import {onetomany, manytoone, manytomany} from 'nodedata/decorators/association';
-import {document} from 'nodedata/decorators/document';
-import {field} from 'nodedata/decorators/field';
+import {onetomany, manytoone, manytomany} from 'nodedata/core/decorators';
+import {field, document} from 'nodedata/mongoose/decorators';
 import {IBlog} from './blog.ts';
-import {Strict} from 'nodedata/enums/document-strict';
+import {Strict} from 'nodedata/mongoose/enums';
 
 @document({ name: 'blogs', strict: Strict.true  })
 export class BlogModel{

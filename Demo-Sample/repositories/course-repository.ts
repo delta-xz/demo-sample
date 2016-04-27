@@ -1,4 +1,4 @@
-﻿import * as decorator from "nodedata/decorators/repository";
+﻿import * as decorator from "nodedata/core/decorators/repository";
 import {CourseModel} from '../models/coursemodel';
 
 

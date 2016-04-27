@@ -1,7 +1,8 @@
-import {field, document, onetomany, manytoone, manytomany} from 'nodedata/decorators'; 
+import {onetomany, manytoone, manytomany} from 'nodedata/core/decorators'; 
 import {IRole} from './role';
 import * as UM from './usermodel';
-import {Strict} from 'nodedata/enums';
+import {Strict} from 'nodedata/mongoose/enums';
+import {field, document} from 'nodedata/mongoose/decorators';
 
 @document({ name: 'roles', strict: Strict.false })
 export class RoleModel{
