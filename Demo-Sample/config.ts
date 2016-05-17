@@ -9,7 +9,7 @@ export class Config {
 
 export class Security {
     public static isAutheticationEnabled = "enabledWithoutAuthorization";//allowed values: "disabled","enabledWithoutAuthorization","enabledWithAuthorization"
-    public static authenticationType = "passwordBased";//allowed values: "passwordBased","TokenBased"
+    public static authenticationType = "TokenBased";//allowed values: "passwordBased","TokenBased"
     public static useFaceBookAuth = true;// keep it true by default
 }
 

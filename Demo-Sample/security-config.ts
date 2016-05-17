@@ -15,7 +15,7 @@ export class SecurityConfig {
             ]
         }];
     public static tokenSecretkey: string = 'ericthered';
-    public static tokenExpiresInMinutes: number = 2;//2 months
+    public static tokenExpiresInMinutes: number = 2;//2 minutes
 
     public static issuer: string = "accounts.examplesoft.com";
     public static audience: string = "yoursite.net";
