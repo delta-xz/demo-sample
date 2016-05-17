@@ -1,4 +1,4 @@
-﻿import {inject} from 'nodedata/decorators';
+﻿import {service, inject} from 'nodedata/di/decorators';
 import {ServiceC} from './services/service-c';
 import UserRepository from './repositories/userRepository';
 

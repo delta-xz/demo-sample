@@ -1,4 +1,3 @@
-import * as TM from './teachermodel';
 import * as SM from './studentmodel';
 import {onetomany, manytoone, manytomany} from 'nodedata/core/decorators';
 import {field, document} from 'nodedata/mongoose/decorators';

@@ -1,4 +1,4 @@
-﻿import {service, inject} from 'nodedata/decorators';
+﻿import {service, inject} from 'nodedata/di/decorators';
 import {ServiceA} from './service-a';
 
 @service()
