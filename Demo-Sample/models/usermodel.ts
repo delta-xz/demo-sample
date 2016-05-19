@@ -35,19 +35,14 @@ export class UserModel {
     roles: Array<RoleModel>;
 
     _links: any;  
-    
-    // constructor(){
-    //     this._id=0;
-    //     this.name="";
-    //     this.roles=new Array<RoleModel>();
-    // }
+
     constructor(userDto: IUser) {
         this._links = {};
         this._id = <any>userDto._id;
         this.name = userDto.name;
-        //this.age = userDto.age;
-        //this.password = userDto.password;
-        //this.email = userDto.email;
+        this.age = userDto.age;
+        this.password = userDto.password;
+        this.email = userDto.email;
         if (userDto.roles)
             this.roles = userDto.roles;
         else
