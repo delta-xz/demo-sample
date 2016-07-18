@@ -10,10 +10,11 @@ import * as securityConfig from './security-config';
 
 import * as data from 'nodedata/mongoose';
 import * as security from 'nodedata/security/auth/security-utils';
-var Main = require('nodedata/core')(config, securityConfig, __dirname, data.entityServiceInst);
+var Main = require('nodedata/core');
+Main(config, securityConfig, __dirname, data.entityServiceInst);
+
 data.connect();
 data.generateSchema();
-
 
 require('reflect-metadata/reflect');
 var bodyParser = require("body-parser");
@@ -21,6 +22,7 @@ var passport = require('passport'), LocalStrategy = require('passport-local').St
 process.env.APP_ROOT = "hello";
 
 var app = express();
+Main.register(app);
 
 app.use(require('morgan')('combined'));
 app.use(require('cookie-parser')());
