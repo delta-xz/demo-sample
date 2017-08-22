@@ -10,3 +10,6 @@
 8. Post a JSON {"name":"john","":"john"} to http://localhost:9999/data/users.
 8. Hit the api to get data(http://localhost:9999/data/users)
 9. Ensure node version is 5.7.0
+
+
+For diffrent feature checkout diffrent branchs of this reposiotry
