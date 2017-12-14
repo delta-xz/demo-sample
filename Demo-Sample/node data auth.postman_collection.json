@@ -1,0 +1,137 @@
+{
+	"id": "5991ee3f-1cdb-fc4a-272d-c28936255f6e",
+	"name": "node data auth",
+	"description": "",
+	"order": [
+		"3285b2a9-3168-333a-cc7f-1e1d8c8f0720",
+		"f5339f0e-39c6-4e4d-a026-90cdecc5d100",
+		"4992f3bd-5e6e-19fe-f957-0ffc019793e3",
+		"f53598bb-dfb2-6dff-411c-6f4b3e8d4f51"
+	],
+	"folders": [],
+	"timestamp": 1513251728270,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "3285b2a9-3168-333a-cc7f-1e1d8c8f0720",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9999/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513251949294,
+			"name": "register",
+			"description": "",
+			"collectionId": "5991ee3f-1cdb-fc4a-272d-c28936255f6e",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"ritesh\",\n\t\"password\":\"ritesh\"\n\t\n}"
+		},
+		{
+			"id": "4992f3bd-5e6e-19fe-f957-0ffc019793e3",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9999/data/teacher",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513252397823,
+			"name": "get teachers",
+			"description": "",
+			"collectionId": "5991ee3f-1cdb-fc4a-272d-c28936255f6e",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"ritesh\",\n\t\"password\":\"ritesh\"\n\t\n}"
+		},
+		{
+			"id": "f5339f0e-39c6-4e4d-a026-90cdecc5d100",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9999/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513252045838,
+			"name": "login",
+			"description": "",
+			"collectionId": "5991ee3f-1cdb-fc4a-272d-c28936255f6e",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"ritesh\",\n\t\"password\":\"ritesh\"\n\t\n}"
+		},
+		{
+			"id": "f53598bb-dfb2-6dff-411c-6f4b3e8d4f51",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:9999/data/teacher",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1513252378738,
+			"name": "create teacher",
+			"description": "",
+			"collectionId": "5991ee3f-1cdb-fc4a-272d-c28936255f6e",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"teach\",\n\t\"courses\":[\"a\",\"b\"]\n\t\n}"
+		}
+	]
+}
