@@ -42,6 +42,7 @@ export class UserModel {
     //     this.roles=new Array<RoleModel>();
     // }
     constructor(userDto: IUser) {
+        userDto = userDto ? userDto : <any>{};
         this._links = {};
         this._id = <any>userDto._id;
         this.name = userDto.name;

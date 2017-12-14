@@ -6,7 +6,7 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 import {service} from 'nodedata/di/decorators/service';
 import {UserDetails} from 'nodedata/security/auth/user-details';
 import {User} from 'nodedata/security/auth/user';
-
+var bcryptNodejs = require("bcrypt-nodejs");
 import {inject, injectbyname} from 'nodedata/di/decorators/inject';
 import UserRepository from './repositories/userRepository';
 import {UserDetailService} from 'nodedata/security/auth/user-detail-service';
@@ -82,4 +82,29 @@ export class CurrentUserDetailService implements UserDetailService {
             return userDetail;
         });
     }
+
+    getCurrentUser(sessionId): Q.Promise<any>{
+        return Q.when(true);
+    }
+
+    getNewUser(req, res) {
+        var userDetail: UserDetails;
+        var user = req.body;
+        this.userRepo.findByField("name", user.name).then((foundUser) => {
+            if (foundUser == null || foundUser == undefined || !foundUser._id) {
+                user.password = bcryptNodejs.hashSync(user.password, bcryptNodejs.genSaltSync(8), null);
+                this.createNewUser(user).then((finalUser) => {
+                    res.set("Content-Type", "application/json");
+                    res.send(200, JSON.stringify('user created', null, 4));
+                }, (error) => {
+                    res.set("Content-Type", "application/json");
+                    res.send(400, JSON.stringify('cannot create user', null, 4));
+                });
+            } else {
+                res.set("Content-Type", "application/json");
+                res.send(400, JSON.stringify('user already exists', null, 4));
+            }
+        });
+    };
+
 }
